@@ -14,18 +14,23 @@ r.get('/:id', function(req , res){
             SongTitleInKorean: '희망',
             SongNumberInTJ: '-'
         }
+        const result = {
+            UserId: UserId,
+            Songs: [songA]
+        };
+        res.send(result);
     }else{
         const songA = {
             SongTitleInJapanese: '僕の戦争',
             SongTitleInKorean: '나의 전쟁',
             SongNumberInTJ: '68371'
         }
+        const result = {
+            UserId: UserId,
+            Songs: [songA]
+        };
+        res.send(result);
     }
-    const result = {
-        UserId: UserId,
-        Songs: [songA]
-    };
-    res.send(result);
 });
 
 module.exports = r;

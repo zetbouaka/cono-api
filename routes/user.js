@@ -5,7 +5,7 @@ const r = Router();
 
 r.get('/', (req, res) => res.json(new SuccessResponseObject('demo path live 🚀')));
 
-app.get('/:id', function(req , res){
+r.get('/:id', function(req , res){
     res.render('article' + req.params.id);
 });
 

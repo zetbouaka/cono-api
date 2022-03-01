@@ -6,7 +6,8 @@ const r = Router();
 r.get('/', (req, res) => res.json(new SuccessResponseObject('demo path live 🚀')));
 
 r.get('/:id', function(req , res){
-    if (res.params.id == 'KAMIZO'){
+    // if (res.params.id == 'KAMIZO'){
+    if (true){
         const songA = {
             SongTitleInJapanese: '希望',
             SongTitleInKorean: '희망',

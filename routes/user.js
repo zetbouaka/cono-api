@@ -6,14 +6,24 @@ const r = Router();
 r.get('/', (req, res) => res.json(new SuccessResponseObject('demo path live 🚀')));
 
 r.get('/:id', function(req , res){
-    const songA = {
-        SongTitleInJapanese: '僕の戦争',
-        SongTitleInKorean: '나의 전쟁',
-        SongNumberInTJ: '68371'
+    const UserId = req.params.id;
+
+    if (UserId == "KAMIZO"){
+        const songA = {
+            SongTitleInJapanese: '希望',
+            SongTitleInKorean: '희망',
+            SongNumberInTJ: '-'
+        }
+    }else{
+        const songA = {
+            SongTitleInJapanese: '僕の戦争',
+            SongTitleInKorean: '나의 전쟁',
+            SongNumberInTJ: '68371'
+        }
     }
     const result = {
-        userid: req.params.id,
-        songs: [songA]
+        UserId: UserId,
+        Songs: [songA]
     };
     res.send(result);
 });

@@ -7,7 +7,7 @@ const r = Router();
 
 r.use('/demo', demo);
 
-r.use('/user/', user);
+r.use('/user', user);
 
 r.get('/', (req, res) => res.json(new SuccessResponseObject('express vercel boiler plate')));
 

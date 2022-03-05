@@ -7,7 +7,11 @@ r.get('/', (req, res) => res.json(new SuccessResponseObject('demo path live 🚀
 
 r.get('/:id', function(req , res){
     const UserId = req.params.id;
-
+    const songB = {
+        SongTitleInJapanese: 'SKILL',
+        SongTitleInKorean: 'SKILL',
+        SongNumberInTJ: '68371'  
+    }
     if (UserId == "KAMIZO"){
         const songA = {
             SongTitleInJapanese: '希望',
@@ -16,7 +20,7 @@ r.get('/:id', function(req , res){
         }
         const result = {
             UserId: UserId,
-            Songs: [songA]
+            Songs: [songA, songB]
         };
         res.send(result);
     }else{
@@ -27,7 +31,7 @@ r.get('/:id', function(req , res){
         }
         const result = {
             UserId: UserId,
-            Songs: [songA]
+            Songs: [songA, songB]
         };
         res.send(result);
     }
